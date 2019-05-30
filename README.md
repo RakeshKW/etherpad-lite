@@ -29,6 +29,22 @@ You'll need git and [node.js](https://nodejs.org) installed (minimum required No
 
 To update to the latest released version, execute `git pull origin`. The next start with `bin/run.sh` will update the dependencies.
 
+**Changing default database(Dirty DB) to PostgreSQL.**
+
+  1. Connect to PostgreSQL and create a new user (for example user name is 'etherpad')
+        CREATE USER etherpad;
+  2. Create a password for the created user 
+        ALTER USER etherpad WITH PASSWORD '<password>';
+  3. Edit settings.json in your Etherpad Lite root folder and change the database settings
+      "dbType" : "postgres",
+      "dbSettings" : {
+          "user"    : "etherpad",
+          "host"    : "localhost",
+          "password": "password",  
+          "database": "etherpad",
+          "charset" : "utf8mb4"
+      }
+
 [Next steps](#next-steps).
 
 ## Windows
