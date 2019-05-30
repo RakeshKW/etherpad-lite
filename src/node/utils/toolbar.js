@@ -168,6 +168,15 @@ module.exports = {
     underline: defaultButtonAttributes("underline"),
     strikethrough: defaultButtonAttributes("strikethrough"),
 
+    //custome button iframe
+
+    iframeButton:{
+      command: "iframeButton",
+      localizationId: "myPlugin.toolbar.myButton",
+      //class: "buttontext iframeButton"
+      class: "buttonicon buttonicon-insertorderedlist"
+    },
+
     orderedlist: {
       command: "insertorderedlist",
       localizationId: "pad.toolbar.ol.title",
@@ -256,8 +265,9 @@ module.exports = {
         removeItem(buttons[0],"savedrevision");
       }
     }
-
     var groups = _.map(buttons, function (group) {
+    //console.log("b");
+    //console.log(group);
       return ButtonsGroup.fromArray(group).render();
     });
     return groups.join(this.separator());

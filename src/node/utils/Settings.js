@@ -148,7 +148,8 @@ exports.toolbar = {
     ["bold", "italic", "underline", "strikethrough"],
     ["orderedlist", "unorderedlist", "indent", "outdent"],
     ["undo", "redo"],
-    ["clearauthorship"]
+    ["clearauthorship"],
+    ["iframeButton"],
   ],
   right: [
     ["importexport", "timeslider", "savedrevision"],

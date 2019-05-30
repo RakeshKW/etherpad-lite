@@ -146,6 +146,11 @@ a img {
   color:#666;
 }
 
+/* custom css for iframe */
+.iframeButton:before{
+  content: "iFrame";
+}
+
 .buttontext::-moz-focus-inner {
   padding: 0;
   border: 0;

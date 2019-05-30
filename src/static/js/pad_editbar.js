@@ -411,6 +411,14 @@ var padeditbar = (function()
     toolbar.registerDropdownCommand("connectivity");
     toolbar.registerDropdownCommand("import_export");
     toolbar.registerDropdownCommand("embed");
+    toolbar.registerDropdownCommand("iframeButton");
+
+    //cutom button registercommand 
+    
+    toolbar.registerCommand("iframeButton", function () {
+      console.log("iframeButton command");
+    });
+    
 
     toolbar.registerCommand("settings", function () {
       toolbar.toggleDropDown("settings", function(){
@@ -433,6 +441,7 @@ var padeditbar = (function()
 
     toolbar.registerCommand("showusers", function () {
       toolbar.toggleDropDown("users", function(){
+        alert('ttest');
         $('#myusernameedit').focus();
       });
     });
