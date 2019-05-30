@@ -1,0 +1,32 @@
+1) Clone the git repository: git clone --branch master git://github.com/ether/etherpad-lite.git
+2) Change into the new directory containing the cloned source code: cd etherpad-lite
+3)run bin/run.sh and open http://127.0.0.1:9001 in your browser.
+
+4) Changing default database(Dirty DB) to PostgreSQL.
+    a) Connect to PostgreSQL and create a new user (for example user name is 'etherpad')
+        CREATE USER etherpad;
+    b) Create a password for the created user 
+        ALTER USER etherpad WITH PASSWORD '<password>';
+    c) Edit settings.json in your Etherpad Lite root folder and change the database settings
+        "dbType" : "postgres",
+        "dbSettings" : {
+            "user"    : "etherpad",
+            "host"    : "localhost",
+            "password": "password",  
+            "database": "etherpad",
+            "charset" : "utf8mb4"
+        }
+
+5)Add button to toolbar
+	a) goto: src/node/util/toolbar.js
+	find code "module.export ={
+		add your button here
+	}"
+
+	b) add css for that button in pad.css(src/static/css)
+	c) register button command in pad_editorbar.js(src/static/js/)
+	d)goto setting.js(src/node/utils/) and find code 
+	"export.toolbar = {
+		add button inside left or right array
+	}"
+		

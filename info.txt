@@ -1,0 +1,4 @@
+database used: Dirty DB
+plugin used for accessing database : ueberdb2 (https://www.npmjs.com/package/ueberdb2)
+
+socket io with transport protocols ['xhr-polling', 'jsonp-polling', 'htmlfile']
